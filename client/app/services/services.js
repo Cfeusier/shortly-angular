@@ -1,6 +1,7 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
+
   var fetch = function(data) {
     return $http({
       method: 'GET',
@@ -9,8 +10,18 @@ angular.module('shortly.services', [])
       return resp.data;
     });
   };
+
+  var addLink = function(link) {
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: link
+    });
+  };
+
   return {
-    fetch: fetch
+    fetch: fetch,
+    addLink: addLink
   };
 })
 .factory('Auth', function ($http, $location, $window) {
