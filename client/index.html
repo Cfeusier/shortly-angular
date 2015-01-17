@@ -9,7 +9,7 @@
     <h1>Shortly</h1>
 
     <!--replace ng-if -->
-    <div class='navigation' ng-controller='AuthController'>
+    <div class='navigation' ng-controller='AuthController' ng-show='isValid()'>
       <ul>
         <li><a href='#/links' class='index'>All Links</a></li>
         <li><a href='#/shorten' class='create'>Shorten</a></li>

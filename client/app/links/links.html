@@ -1,5 +1,6 @@
 <div class='links'>
-  <div class="link" ng-repeat="link in data.links | orderBy:'created_at'">
+  <input type='text' ng-model='searchlinks' placeholder="search links"/>
+  <div class="link" ng-repeat="link in data.links | filter:searchlinks | orderBy:'visits':true">
     <img src="assets/redirect_icon.png">
     <div class="info">
       <div class-"visits">

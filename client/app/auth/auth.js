@@ -28,4 +28,12 @@ angular.module('shortly.auth', [])
       });
   };
 
+  $scope.isValid = function(){
+    return Auth.isAuth();
+  };
+
+  $scope.signout = function(){
+    Auth.signout();
+  };
+
 });
