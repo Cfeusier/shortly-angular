@@ -27,4 +27,13 @@ angular.module('shortly.auth', [])
         console.error(error);
       });
   };
+
+  $scope.isValid = function(){
+    return Auth.isAuth();
+  };
+
+  $scope.signout = function(){
+    Auth.signout();
+  };
+
 });

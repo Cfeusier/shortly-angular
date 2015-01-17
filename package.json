@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start --browsers PhantomJS"
   },
-  "author": "",
+  "author": "Clark Feusier",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^1.5.7",
