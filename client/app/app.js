@@ -2,6 +2,7 @@ angular.module('shortly', [
   'shortly.services',
   'shortly.links',
   'shortly.shorten',
+  'shortly.link',
   'shortly.auth',
   'shortly.nav',
   'ngRoute'
@@ -23,6 +24,10 @@ angular.module('shortly', [
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
+    })
+    .when('/link', {
+      templateUrl: 'app/link/link.html',
+      controller: 'LinkController'
     })
     .otherwise({
       redirectTo: '/links'

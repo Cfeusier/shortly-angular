@@ -1,6 +1,6 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, $window, $location, Links) {
+.controller('LinksController', function ($scope, Links) {
   $scope.data = {};
   $scope.getLinks = function() {
     Links.fetch().then(function(links) {
@@ -9,6 +9,7 @@ angular.module('shortly.links', [])
       console.error(err);
     });
   };
+
   $scope.getLinks();
   $scope.name = 'LinksController';
 });

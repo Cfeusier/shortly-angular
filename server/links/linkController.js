@@ -81,6 +81,16 @@ module.exports = {
         res.redirect(savedLink.url);
       }
     });
+  },
+
+  getLink: function(req, res, next) {
+    Link.findOne({ _id: req.params.id }, function (err, link) {
+      if (err) {
+        next(err);
+      } else {
+        res.send(link);
+      }
+    });
   }
 
 };
